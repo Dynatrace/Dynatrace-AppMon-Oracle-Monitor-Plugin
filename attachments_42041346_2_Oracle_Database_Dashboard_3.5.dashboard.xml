@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ATTENTION - THIS IS AN AUTOMATICALLY GENERATED FILE -->
+<!-- Manual changes can cause severe problems and system instability -->
+<!-- Apply manual changes only if you have received explicit instructions from dynaTrace Support -->
+<dynatrace version="3.5.2.2393" date="6/6/11 12:24 PM">
+  <dashboardconfig memento.version="3.5.2.2393" icon="com.dynatrace.diagnostics.sdk/default.gif" sessiontype="live" locationassource="true" authorname="" opendrilldowninnewdashboard="false" sessionid="GoSpace" bgcolor="255,255,255,255" modified="2011-06-06T12:24:05-0700" id="f9614dc3-2d9a-463c-9f08-2bfd9fd2d3d6" revision="00000130-6669-7755-983b-842b92a0c0cb" description="" name="Oracle Database Dashboard 3.5" modifiedbyname="joe.hoffman" locationascomparesource="false">
+    <reportconfig lines.per.table="100" enabled="true" print.legends="true" orientation="portrait" pagesize="A4" type="PDF" title="New Dashboard" override="false" levels.per.tree="10" description="" print.images="true" formatpdf="PDF Report" />
+    <filter>
+      <criterion severities="" statesmode="all" severitiesmode="all" states="" rulesmode="all" type="incident" />
+      <criterion type="timeframe">
+        <timeframe type="Last 30min" />
+      </criterion>
+      <criterion type="webrequest">
+        <textpattern enabled="true" name="uri" type="contains" />
+        <textpattern enabled="true" name="query" type="contains" />
+      </criterion>
+      <criterion type="btm" />
+      <criterion excludeexternalsubpaths="false" type="api" mode="all" />
+      <criterion showrendering="true" shownetwork="true" showjavascript="true" type="riapurepathtype" requestcriterion="ALL" />
+      <criterion type="purepaths" mode="all" />
+      <criterion enabled="false" filterbyid="false" type="threads" />
+      <criterion completepurepath="true" type="agents" mode="all">
+        <textpattern enabled="true" name="agentname" type="contains" />
+        <textpattern enabled="true" name="agenthost" type="contains" />
+      </criterion>
+      <criterion timerenabled="false" pageenabled="false" type="browsersectionfilter">
+        <textpattern enabled="true" name="timername" type="contains" />
+        <textpattern enabled="true" name="pageurl" type="contains" />
+      </criterion>
+      <criterion completepurepath="true" type="hosts" mode="all" />
+      <criterion type="webpage">
+        <textpattern enabled="true" name="timerName" type="contains" />
+        <textpattern enabled="true" name="pageContext" type="contains" />
+      </criterion>
+      <criterion includemeasurename="true" includetestname="true" type="tests" teststatus="OK" />
+    </filter>
+    <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+    <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" descriptionfontsize="8" nameshow="true" clienttheme="DEFAULT" headertype="CUSTOM" namefontsize="10" descriptionshow="true" autoadjustfontsizes="false" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+    <dashboardlayout>
+      <portletfolder relationtype="LEFT" ratio="0.95" folderid="org.eclipse.ui.internal.ViewStack@a4c05e" selectionindex="0" relatedfolderid="DashboardLayout.blankArea" portletconfigorder="3bf85c96-5588-4ef7-ba62-876aa2951823">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="HEADLESS" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.03621495" folderid="df701663-eafe-44a6-9b56-43ff8b4f126d" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@a4c05e" portletconfigorder="8a25c1f3-31d0-4a53-ad40-07868357c72c">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.44002524" folderid="org.eclipse.ui.internal.ViewStack@41af91" selectionindex="0" relatedfolderid="df701663-eafe-44a6-9b56-43ff8b4f126d" portletconfigorder="c10b66d4-2968-4d4e-b03f-8faa98217986">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.4144354" folderid="org.eclipse.ui.internal.ViewStack@fefe2a" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@41af91" portletconfigorder="e4a782df-9da7-440e-8898-7d1f6ee50f54">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.48906562" folderid="org.eclipse.ui.internal.ViewStack@33d1c6" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@fefe2a" portletconfigorder="3b92d724-23bd-41b3-aeed-1f523b5746bd">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.4983089" folderid="org.eclipse.ui.internal.ViewStack@20f93d" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@33d1c6" portletconfigorder="8e7e9697-7630-47aa-ad1e-8d7e8bb353d6">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.4959255" folderid="org.eclipse.ui.internal.ViewStack@ab0321" selectionindex="0" relatedfolderid="df701663-eafe-44a6-9b56-43ff8b4f126d" portletconfigorder="b79dfa36-d10c-47e5-8c92-cc64027d859d">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.5" folderid="org.eclipse.ui.internal.ViewStack@18379cf" selectionindex="0" relatedfolderid="df701663-eafe-44a6-9b56-43ff8b4f126d" portletconfigorder="6d0fa6d2-0130-4385-98ec-3dd811095706">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+    </dashboardlayout>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/default.gif" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@18379cf" sessiontype="live" locationassource="true" usedashboardsource="true" sessionid="GoSpace" bgcolor="236,233,216,255" id="6d0fa6d2-0130-4385-98ec-3dd811095706" addfilterinfo="false" description="The Chart Dashlet displays the observation and analysis of the System under Diagnosis components over time." lastvalue="false" name="Oracle SGA Cache Hit Ratios" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="2" />
+      <filter>
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" bounds.y.lower="0.0" charttype="MeterChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="true" bounds.y.enabled="true" axis.y.show="false" bounds.y.upper="100.0" subchartweights="250,250,250,250" orientation="Horizontal" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" valuestyle="2" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition min="false" aggregationfromseries="false" scale="false" host="true" max="false" measure="true" count="false" last="false" sum="false" agent="true" aggregation="false" unit="false" avg="false" />
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="number" id="cdb1024a-707b-4233-a2cc-3a0fc6622b1d" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="Buffer Busy Waits" sourcecolor="RGB(128,128,64,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="GoSpace" displayrate="10s" systemid="GoSpace" unit="number" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Buffer Busy Waits" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="" parentkeyid="Buffer Busy Waits" metrickeyid="Buffer Busy Waits" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="c48c9966-697b-395d-8d8b-af3bf5d2f9e5" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="Buffer Busy Waits" sourcecolor="RGB(192,64,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Buffer Busy Waits" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="dbserv" parentkeyid="Buffer Busy Waits" metrickeyid="Buffer Busy Waits" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="dbserv" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="percent" id="34695d41-6da0-43a6-86fe-8ca88ae4072c" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Execution Without Parse Ratio" sourcecolor="RGB(64,128,0,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="GoSpace" displayrate="10s" systemid="GoSpace" unit="percent" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Execution Without Parse Ratio" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="" parentkeyid="Execution Without Parse Ratio" metrickeyid="Execution Without Parse Ratio" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="RepositoryDB" measureunit="percent" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="percent" fetchmeasurecolor="true" id="4ff2fa46-f0d5-3bd1-8bf8-8cb3d685c0f0" displayrate="10s" unit="percent" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="false" name="Execution Without Parse Ratio" sourcecolor="RGB(128,64,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Execution Without Parse Ratio" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="dbserv" parentkeyid="Execution Without Parse Ratio" metrickeyid="Execution Without Parse Ratio" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="dbserv" monitordetails="RepositoryDB" measureunit="percent" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="3" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="percent" id="6335b82b-903d-4ce8-bc6c-660c002490ce" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Memory Sort Ratio" sourcecolor="RGB(192,0,0,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="GoSpace" displayrate="10s" systemid="GoSpace" unit="percent" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Memory Sort Ratio" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="" parentkeyid="Memory Sort Ratio" metrickeyid="Memory Sort Ratio" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="RepositoryDB" measureunit="percent" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="percent" fetchmeasurecolor="true" id="d6ab60f2-d10d-33ec-8745-fb0fa2e4fa7d" displayrate="10s" unit="percent" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="false" name="Memory Sort Ratio" sourcecolor="RGB(0,192,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Memory Sort Ratio" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="dbserv" parentkeyid="Memory Sort Ratio" metrickeyid="Memory Sort Ratio" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="dbserv" monitordetails="RepositoryDB" measureunit="percent" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="4" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="percent" id="515869eb-b76f-44fe-a09d-06783e32deeb" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="SQL Area Get Ratio" sourcecolor="RGB(0,64,192,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="GoSpace" displayrate="10s" systemid="GoSpace" unit="percent" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="SQL Area Get Ratio" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="" parentkeyid="SQL Area Get Ratio" metrickeyid="SQL Area Get Ratio" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="RepositoryDB" measureunit="percent" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="percent" fetchmeasurecolor="true" id="a93109e7-78fb-3ec1-8f5c-394a40fa5508" displayrate="10s" unit="percent" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="false" name="SQL Area Get Ratio" sourcecolor="RGB(0,192,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="SQL Area Get Ratio" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="dbserv" parentkeyid="SQL Area Get Ratio" metrickeyid="SQL Area Get Ratio" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="dbserv" monitordetails="RepositoryDB" measureunit="percent" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="e9505359-dbbf-321d-bb66-8d5ad9858b5f" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="Buffer Busy Waits" sourcecolor="RGB(128,128,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Buffer Busy Waits" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Buffer Busy Waits" metrickeyid="Buffer Busy Waits" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="percent" fetchmeasurecolor="true" id="c400bae1-139e-305d-9c81-accafacd7dd3" displayrate="10s" unit="percent" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="false" name="Execution Without Parse Ratio" sourcecolor="RGB(64,128,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Execution Without Parse Ratio" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Execution Without Parse Ratio" metrickeyid="Execution Without Parse Ratio" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="percent" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="percent" fetchmeasurecolor="true" id="cc6f81e7-a814-3112-a066-dff796ec2072" displayrate="10s" unit="percent" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="false" name="Memory Sort Ratio" sourcecolor="RGB(192,0,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Memory Sort Ratio" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Memory Sort Ratio" metrickeyid="Memory Sort Ratio" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="percent" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="percent" fetchmeasurecolor="true" id="24905b2d-1550-3f99-a802-38e5fbfaa237" displayrate="10s" unit="percent" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="false" name="SQL Area Get Ratio" sourcecolor="RGB(0,64,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="SQL Area Get Ratio" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="SQL Area Get Ratio" metrickeyid="SQL Area Get Ratio" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="percent" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="93373a56-e8b3-361b-adf1-25cf4f9bb88d" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="Buffer Busy Waits" sourcecolor="RGB(128,128,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Buffer Busy Waits" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Buffer Busy Waits" metrickeyid="Buffer Busy Waits" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="percent" fetchmeasurecolor="true" id="e0fc05e9-b93a-35b7-a335-31e85e82809b" displayrate="10s" unit="percent" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="false" name="Execution Without Parse Ratio" sourcecolor="RGB(64,128,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Execution Without Parse Ratio" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Execution Without Parse Ratio" metrickeyid="Execution Without Parse Ratio" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="percent" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="percent" fetchmeasurecolor="true" id="21ae51cb-ce5a-3f02-8a97-afd351ef7d28" displayrate="10s" unit="percent" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="false" name="Memory Sort Ratio" sourcecolor="RGB(192,0,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Memory Sort Ratio" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Memory Sort Ratio" metrickeyid="Memory Sort Ratio" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="percent" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="percent" fetchmeasurecolor="true" id="d851ed0f-2f30-3234-a6f9-65d3a9e3bc23" displayrate="10s" unit="percent" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="false" name="SQL Area Get Ratio" sourcecolor="RGB(0,64,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="SQL Area Get Ratio" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="SQL Area Get Ratio" metrickeyid="SQL Area Get Ratio" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="percent" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" name="The Measure table" sortcolumn="2" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="282" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="2" sort="Up" forcevisible="false" hidden="false" width="148" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="10" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="8" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="9" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="10" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="11" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="12" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="13" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/default.gif" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@41af91" sessiontype="live" locationassource="true" usedashboardsource="true" sessionid="GoSpace" bgcolor="236,233,216,255" id="c10b66d4-2968-4d4e-b03f-8faa98217986" addfilterinfo="false" description="The Chart Dashlet displays the observation and analysis of the System under Diagnosis components over time." lastvalue="false" name="Oracle Logical to Physical Reads" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="4" />
+      <filter>
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="1" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="PieChart3D" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" subchartweights="200" orientation="Horizontal" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" valuestyle="2" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition min="false" aggregationfromseries="false" scale="false" host="true" max="false" measure="true" count="false" last="false" sum="false" agent="true" aggregation="false" unit="false" avg="false" />
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="number" id="e690757a-c448-4467-a559-9268411b251e" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="Consistent Gets" sourcecolor="RGB(128,192,64,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="GoSpace" displayrate="10s" systemid="GoSpace" unit="number" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Consistent Gets" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="" parentkeyid="Consistent Gets" metrickeyid="Consistent Gets" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="648cd826-9285-3088-899b-a88a846ca2ee" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="Consistent Gets" sourcecolor="RGB(64,192,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Consistent Gets" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="dbserv" parentkeyid="Consistent Gets" metrickeyid="Consistent Gets" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="dbserv" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="number" id="e3ee2eb9-dac9-4548-977c-d253e7065a3d" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="DB Block Gets" sourcecolor="RGB(0,192,128,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="GoSpace" displayrate="10s" systemid="GoSpace" unit="number" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="DB Block Gets" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="" parentkeyid="DB Block Gets" metrickeyid="DB Block Gets" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="924dceb8-5eb5-3096-a419-cccfa6c5a2b4" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="DB Block Gets" sourcecolor="RGB(64,0,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="DB Block Gets" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="dbserv" parentkeyid="DB Block Gets" metrickeyid="DB Block Gets" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="dbserv" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="3" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="number" id="806cb993-180c-4278-8fb2-6d5c7e9dd1a0" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="Physical Reads" sourcecolor="RGB(128,0,64,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="GoSpace" displayrate="10s" systemid="GoSpace" unit="number" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Physical Reads" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="" parentkeyid="Physical Reads" metrickeyid="Physical Reads" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="676529f4-971b-3879-b75e-e088909a4ee0" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="Physical Reads" sourcecolor="RGB(64,128,128,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Physical Reads" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="dbserv" parentkeyid="Physical Reads" metrickeyid="Physical Reads" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="dbserv" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="bcb61725-35d9-3703-bf4f-008ab369e160" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="Consistent Gets" sourcecolor="RGB(128,192,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Consistent Gets" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Consistent Gets" metrickeyid="Consistent Gets" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="66fb5c22-f8f2-3052-8ead-82f7e64aafdf" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="DB Block Gets" sourcecolor="RGB(0,192,128,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="DB Block Gets" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="DB Block Gets" metrickeyid="DB Block Gets" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="1ee07c90-00bc-3d03-8aec-12455f1bc1a1" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="Physical Reads" sourcecolor="RGB(128,0,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Physical Reads" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Physical Reads" metrickeyid="Physical Reads" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="b0db59c5-0ca8-39c9-863f-a829695ae331" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="Consistent Gets" sourcecolor="RGB(128,192,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Consistent Gets" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Consistent Gets" metrickeyid="Consistent Gets" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="020bbd15-8161-3cf0-a418-255edc2b4e06" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="DB Block Gets" sourcecolor="RGB(0,192,128,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="DB Block Gets" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="DB Block Gets" metrickeyid="DB Block Gets" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="e65cb685-1847-393b-ab7c-93389717ce17" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="Physical Reads" sourcecolor="RGB(128,0,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Physical Reads" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Physical Reads" metrickeyid="Physical Reads" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="AgentGroup" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" name="The Measure table" sortcolumn="2" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="150" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="2" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="10" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="8" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="9" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="10" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="11" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="12" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="13" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/default.gif" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@20f93d" sessiontype="live" locationassource="true" usedashboardsource="true" sessionid="GoSpace" bgcolor="236,233,216,255" id="8e7e9697-7630-47aa-ad1e-8d7e8bb353d6" addfilterinfo="false" description="" lastvalue="false" name="DB Block Changes/Gets" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="6" />
+      <filter>
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="LineChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" subchartweights="200" orientation="Horizontal" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" valuestyle="2" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition min="false" aggregationfromseries="false" scale="false" host="true" max="false" measure="true" count="false" last="false" sum="false" agent="false" aggregation="false" unit="false" avg="false" />
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" aggregationtype="Max" colorinheritancemode="parent" uiunit="number" id="b2f8223e-fa24-452a-b40b-26454fe37410" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="DB Block Changes" sourcecolor="RGB(0,64,192,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="GoSpace" displayrate="10s" systemid="GoSpace" unit="number" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="DB Block Changes" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="" parentkeyid="DB Block Changes" metrickeyid="DB Block Changes" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" aggregationtype="Max" colorinheritancemode="parent" uiunit="number" id="659894a2-2154-4d66-84e9-ce1faaae087c" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="DB Block Gets" sourcecolor="RGB(0,192,128,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="GoSpace" displayrate="10s" systemid="GoSpace" unit="number" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="DB Block Gets" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="" parentkeyid="DB Block Gets" metrickeyid="DB Block Gets" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Max" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="0be37ce7-059b-388f-b5ef-4088746112d6" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="DB Block Changes" sourcecolor="RGB(0,64,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="DB Block Changes" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="DB Block Changes" metrickeyid="DB Block Changes" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Max" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="803871fa-0715-3837-8fca-679c29fcf0ca" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="DB Block Gets" sourcecolor="RGB(0,192,128,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="DB Block Gets" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="DB Block Gets" metrickeyid="DB Block Gets" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Max" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="168d88d3-2638-3322-87be-e250e3049ed6" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="DB Block Changes" sourcecolor="RGB(0,64,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="DB Block Changes" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="DB Block Changes" metrickeyid="DB Block Changes" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Max" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="df752cc8-c6c8-339b-b4f9-032f95bef879" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="DB Block Gets" sourcecolor="RGB(0,192,128,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="DB Block Gets" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="DB Block Gets" metrickeyid="DB Block Gets" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" name="The Measure table" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="204" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/default.gif" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@fefe2a" sessiontype="live" locationassource="true" usedashboardsource="true" sessionid="GoSpace" bgcolor="236,233,216,255" id="e4a782df-9da7-440e-8898-7d1f6ee50f54" addfilterinfo="false" description="Shows the maximum and average concurrent sessions in use" lastvalue="false" name="Oracle Concurrent Sessions" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="0" />
+      <filter>
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="201,798" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="StackedAreaChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" subchartweights="200" orientation="Horizontal" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" valuestyle="2" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition min="false" aggregationfromseries="false" scale="false" host="true" max="false" measure="true" count="false" last="false" sum="false" agent="true" aggregation="false" unit="false" avg="false" />
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" aggregationtype="Max" colorinheritancemode="parent" uiunit="number" id="2110d8d9-9037-401b-a5e4-1a578ba55aa1" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="Current Concurrent User Sessions" sourcecolor="RGB(0,0,192,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="GoSpace" displayrate="10s" systemid="GoSpace" unit="number" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Current Concurrent User Sessions" metricgroupkey="Oracle Sessions" collector="" systemid="GoSpace" agenthost="" parentkeyid="Current Concurrent User Sessions" metrickeyid="Current Concurrent User Sessions" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="e8e1ce94-bd8d-3835-9321-a4e2268960f4" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="Maximum Concurrent User Sessions" sourcecolor="RGB(0,192,128,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Maximum Concurrent User Sessions" metricgroupkey="Oracle Sessions" collector="" systemid="GoSpace" agenthost="dbserv" parentkeyid="Maximum Concurrent User Sessions" metrickeyid="Maximum Concurrent User Sessions" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="dbserv" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="405fb7f0-97d0-3dd7-a5ad-ea6a7bf2976a" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="Current Concurrent User Sessions" sourcecolor="RGB(64,64,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Current Concurrent User Sessions" metricgroupkey="Oracle Sessions" collector="" systemid="GoSpace" agenthost="dbserv" parentkeyid="Current Concurrent User Sessions" metrickeyid="Current Concurrent User Sessions" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="dbserv" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="f5c3bf45-4745-3a63-8c74-104f25f45618" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="Maximum Concurrent User Sessions" sourcecolor="RGB(192,128,128,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Maximum Concurrent User Sessions" metricgroupkey="Oracle Sessions" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Maximum Concurrent User Sessions" metrickeyid="Maximum Concurrent User Sessions" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="aa3f8e17-9db9-33d5-bb75-a039adccfb60" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="Current Concurrent User Sessions" sourcecolor="RGB(0,0,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Current Concurrent User Sessions" metricgroupkey="Oracle Sessions" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Current Concurrent User Sessions" metrickeyid="Current Concurrent User Sessions" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Max" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="bdee8ee3-b4e4-346c-8324-b306bdb6b1e4" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="Current Concurrent User Sessions" sourcecolor="RGB(0,0,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Current Concurrent User Sessions" metricgroupkey="Oracle Sessions" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Current Concurrent User Sessions" metrickeyid="Current Concurrent User Sessions" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" aggregationtype="Max" colorinheritancemode="parent" uiunit="number" id="0804bd9e-8016-4a07-ba72-5ee543514c81" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Highest Concurrent User Sessions" sourcecolor="RGB(255,0,0,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="GoSpace" displayrate="10s" systemid="GoSpace" unit="number" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Highest Concurrent User Sessions" metricgroupkey="Oracle Sessions" collector="" systemid="GoSpace" agenthost="" parentkeyid="Highest Concurrent User Sessions" metrickeyid="Highest Concurrent User Sessions" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Max" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="false" id="15459860-4ed4-3e64-be48-6c2c0e1b8234" displayrate="10s" unit="number" systemid="GoSpace" overridesource="true" rate="10s" ratesupported="true" name="Highest Concurrent User Sessions" sourcecolor="RGB(255,0,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Highest Concurrent User Sessions" metricgroupkey="Oracle Sessions" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Highest Concurrent User Sessions" metrickeyid="Highest Concurrent User Sessions" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" name="The Measure table" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="321" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="10" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="8" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="9" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="10" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="11" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="12" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="13" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/default.gif" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@ab0321" sessiontype="live" locationassource="true" usedashboardsource="true" sessionid="GoSpace" bgcolor="236,233,216,255" id="b79dfa36-d10c-47e5-8c92-cc64027d859d" addfilterinfo="false" description="The Chart Dashlet displays the observation and analysis of the System under Diagnosis components over time." lastvalue="false" name="Oracle System Waits" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="3" />
+      <filter>
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="1" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="AreaChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" subchartweights="200" orientation="Horizontal" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" valuestyle="2" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition min="false" aggregationfromseries="false" scale="false" host="true" max="false" measure="true" count="false" last="false" sum="false" agent="true" aggregation="false" unit="false" avg="false" />
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="number" id="a138bd4a-f772-4633-8c17-b9063dd0c973" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="Free Buffer Waits" sourcecolor="RGB(192,0,128,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="GoSpace" displayrate="10s" systemid="GoSpace" unit="number" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Free Buffer Waits" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="" parentkeyid="Free Buffer Waits" metrickeyid="Free Buffer Waits" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="number" id="98e342b2-fb38-4c4c-aeb7-cf3f62b64b00" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="Write Complete Waits" sourcecolor="RGB(128,128,128,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="GoSpace" displayrate="10s" systemid="GoSpace" unit="number" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Write Complete Waits" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="" parentkeyid="Write Complete Waits" metrickeyid="Write Complete Waits" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="3" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="number" id="630f7667-0f5b-4e46-a818-9e95d3dd5871" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="Buffer Busy Waits" sourcecolor="RGB(128,128,64,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="GoSpace" displayrate="10s" systemid="GoSpace" unit="number" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Buffer Busy Waits" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="" parentkeyid="Buffer Busy Waits" metrickeyid="Buffer Busy Waits" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="d5bbada9-3462-3682-b4d2-68e446d075dd" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="Free Buffer Waits" sourcecolor="RGB(0,192,128,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Free Buffer Waits" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="dbserv" parentkeyid="Free Buffer Waits" metrickeyid="Free Buffer Waits" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="dbserv" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="5ffc1fe5-e43a-3e1d-b471-c74a9585ecb9" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="Write Complete Waits" sourcecolor="RGB(192,0,128,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Write Complete Waits" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="dbserv" parentkeyid="Write Complete Waits" metrickeyid="Write Complete Waits" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="dbserv" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="913cd366-3745-31f5-bf6a-5fece6b107cb" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="Buffer Busy Waits" sourcecolor="RGB(192,64,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Buffer Busy Waits" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="dbserv" parentkeyid="Buffer Busy Waits" metrickeyid="Buffer Busy Waits" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="dbserv" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="61e159e7-8b25-3344-9ff0-90cb0a0b219e" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="Free Buffer Waits" sourcecolor="RGB(192,0,128,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Free Buffer Waits" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Free Buffer Waits" metrickeyid="Free Buffer Waits" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="038ee29d-a17a-3a72-baed-f27817b5eba6" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="Write Complete Waits" sourcecolor="RGB(128,128,128,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Write Complete Waits" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Write Complete Waits" metrickeyid="Write Complete Waits" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="84c4c9bd-87be-386c-95bb-3df69faadcfa" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="Buffer Busy Waits" sourcecolor="RGB(128,128,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Buffer Busy Waits" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Buffer Busy Waits" metrickeyid="Buffer Busy Waits" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="d76d69a0-29ea-3e43-b66d-806a052f212d" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="Free Buffer Waits" sourcecolor="RGB(192,0,128,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Free Buffer Waits" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Free Buffer Waits" metrickeyid="Free Buffer Waits" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="bee69a41-088d-3ebf-92c1-38e47d77d941" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="Write Complete Waits" sourcecolor="RGB(128,128,128,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Write Complete Waits" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Write Complete Waits" metrickeyid="Write Complete Waits" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="718e6c67-1d69-3d5f-9303-623092c6f2f9" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="Buffer Busy Waits" sourcecolor="RGB(128,128,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Buffer Busy Waits" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Buffer Busy Waits" metrickeyid="Buffer Busy Waits" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" name="The Measure table" sortcolumn="2" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="150" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="2" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="10" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="8" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="9" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="10" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="11" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="12" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="13" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" icon="com.dynatrace.diagnostics.sdk/default.gif" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@a4c05e" locationassource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" usedashboardsource="true" bgcolor="236,233,216,255" id="3bf85c96-5588-4ef7-ba62-876aa2951823" addfilterinfo="false" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="Oracle Database Dashboard" description="Provides visibility into system behavior within your Oracle database(s)" name="Oracle Monitor" typeid="com.dynatrace.diagnostics.portlets.text.Text" ismaster="false" locationascomparesource="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="7" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+      <font height="16" style="BOLD" name="Arial" />
+    </portletconfig>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/default.gif" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="df701663-eafe-44a6-9b56-43ff8b4f126d" sessiontype="live" locationassource="true" usedashboardsource="true" sessionid="GoSpace" bgcolor="236,233,216,255" id="8a25c1f3-31d0-4a53-ad40-07868357c72c" addfilterinfo="false" description="The Chart Dashlet displays the observation and analysis of the System under Diagnosis components over time." lastvalue="false" name="Oracle SGA Cache Hit Ratios" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="2" />
+      <filter>
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="AreaChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="true" bounds.y.enabled="false" axis.y.show="false" subchartweights="250,250,250,250" orientation="Horizontal" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" valuestyle="2" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition min="false" aggregationfromseries="false" scale="false" host="true" max="false" measure="true" count="false" last="false" sum="false" agent="true" aggregation="false" unit="false" avg="false" />
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="number" id="5a8adcdc-01b9-45c2-9024-8db9b0525d49" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="Buffer Busy Waits" sourcecolor="RGB(128,128,64,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="GoSpace" displayrate="10s" systemid="GoSpace" unit="number" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Buffer Busy Waits" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="" parentkeyid="Buffer Busy Waits" metrickeyid="Buffer Busy Waits" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="percent" id="2461c4db-29c5-4a48-9b21-d9e726557680" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Execution Without Parse Ratio" sourcecolor="RGB(64,128,0,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="GoSpace" displayrate="10s" systemid="GoSpace" unit="percent" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Execution Without Parse Ratio" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="" parentkeyid="Execution Without Parse Ratio" metrickeyid="Execution Without Parse Ratio" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="RepositoryDB" measureunit="percent" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="3" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="percent" id="8314526b-6c58-4d98-85eb-8e7436142920" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Memory Sort Ratio" sourcecolor="RGB(192,0,0,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="GoSpace" displayrate="10s" systemid="GoSpace" unit="percent" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Memory Sort Ratio" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="" parentkeyid="Memory Sort Ratio" metrickeyid="Memory Sort Ratio" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="RepositoryDB" measureunit="percent" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="4" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="percent" id="79edd20a-6935-4b20-b4ff-8c0ac47890f5" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="SQL Area Get Ratio" sourcecolor="RGB(0,64,192,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="GoSpace" displayrate="10s" systemid="GoSpace" unit="percent" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="SQL Area Get Ratio" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="" parentkeyid="SQL Area Get Ratio" metrickeyid="SQL Area Get Ratio" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="RepositoryDB" measureunit="percent" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="cf14cdf0-6ca6-32a4-8899-e6c7ec8f8074" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="Buffer Busy Waits" sourcecolor="RGB(192,64,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Buffer Busy Waits" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="dbserv" parentkeyid="Buffer Busy Waits" metrickeyid="Buffer Busy Waits" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="dbserv" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="percent" fetchmeasurecolor="true" id="ec7916d6-82c5-3b7c-8acf-42f24bc50f50" displayrate="10s" unit="percent" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="false" name="Execution Without Parse Ratio" sourcecolor="RGB(128,64,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Execution Without Parse Ratio" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="dbserv" parentkeyid="Execution Without Parse Ratio" metrickeyid="Execution Without Parse Ratio" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="dbserv" monitordetails="RepositoryDB" measureunit="percent" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="percent" fetchmeasurecolor="true" id="4267dc83-f7ba-3dfb-b05c-90ebac6279b2" displayrate="10s" unit="percent" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="false" name="Memory Sort Ratio" sourcecolor="RGB(0,192,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Memory Sort Ratio" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="dbserv" parentkeyid="Memory Sort Ratio" metrickeyid="Memory Sort Ratio" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="dbserv" monitordetails="RepositoryDB" measureunit="percent" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="percent" fetchmeasurecolor="true" id="3a682087-6b32-3670-9efe-f8b142736d5c" displayrate="10s" unit="percent" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="false" name="SQL Area Get Ratio" sourcecolor="RGB(0,192,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="SQL Area Get Ratio" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="dbserv" parentkeyid="SQL Area Get Ratio" metrickeyid="SQL Area Get Ratio" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="dbserv" monitordetails="RepositoryDB" measureunit="percent" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="f897d0df-597f-30c0-95de-0f2cc5480f10" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="Buffer Busy Waits" sourcecolor="RGB(128,128,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Buffer Busy Waits" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Buffer Busy Waits" metrickeyid="Buffer Busy Waits" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="percent" fetchmeasurecolor="true" id="f1e22a42-40a3-3544-bea7-ded6d3dc9fa1" displayrate="10s" unit="percent" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="false" name="Execution Without Parse Ratio" sourcecolor="RGB(64,128,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Execution Without Parse Ratio" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Execution Without Parse Ratio" metrickeyid="Execution Without Parse Ratio" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="percent" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="percent" fetchmeasurecolor="true" id="a005d837-d6e4-3164-a1d1-436f653554c8" displayrate="10s" unit="percent" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="false" name="Memory Sort Ratio" sourcecolor="RGB(192,0,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Memory Sort Ratio" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Memory Sort Ratio" metrickeyid="Memory Sort Ratio" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="percent" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="percent" fetchmeasurecolor="true" id="98f227b1-e078-391c-9bb8-71192dd49671" displayrate="10s" unit="percent" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="false" name="SQL Area Get Ratio" sourcecolor="RGB(0,64,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="SQL Area Get Ratio" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="SQL Area Get Ratio" metrickeyid="SQL Area Get Ratio" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="percent" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="number" fetchmeasurecolor="true" id="e4472ebc-2b4f-3b76-8814-87ac7c72a018" displayrate="10s" unit="number" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="true" name="Buffer Busy Waits" sourcecolor="RGB(128,128,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Buffer Busy Waits" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Buffer Busy Waits" metrickeyid="Buffer Busy Waits" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="number" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="percent" fetchmeasurecolor="true" id="2ae2dba1-e12e-3381-aecf-44b69ce07135" displayrate="10s" unit="percent" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="false" name="Execution Without Parse Ratio" sourcecolor="RGB(64,128,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Execution Without Parse Ratio" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Execution Without Parse Ratio" metrickeyid="Execution Without Parse Ratio" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="percent" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="percent" fetchmeasurecolor="true" id="4c0bf71d-3758-32e0-8178-cfd6dcd3de7f" displayrate="10s" unit="percent" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="false" name="Memory Sort Ratio" sourcecolor="RGB(192,0,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Memory Sort Ratio" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Memory Sort Ratio" metrickeyid="Memory Sort Ratio" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="percent" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="GoSpace" uiunit="percent" fetchmeasurecolor="true" id="151833a8-0e6e-3824-9473-3a8fc929ec1b" displayrate="10s" unit="percent" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="false" name="SQL Area Get Ratio" sourcecolor="RGB(0,64,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="SQL Area Get Ratio" metricgroupkey="Oracle SGA" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="SQL Area Get Ratio" metrickeyid="SQL Area Get Ratio" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="percent" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" name="The Measure table" sortcolumn="3" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="212" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="211" />
+          <column index="2" sort="Up" forcevisible="false" hidden="false" width="167" />
+          <column index="3" sort="Down" forcevisible="false" hidden="false" width="10" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="8" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="9" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="10" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="11" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="12" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="13" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/default.gif" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@33d1c6" sessiontype="live" locationassource="true" usedashboardsource="true" sessionid="GoSpace" bgcolor="236,233,216,255" id="3b92d724-23bd-41b3-aeed-1f523b5746bd" addfilterinfo="false" description="Shows the percentile distribution of session connect time" lastvalue="false" name="Oracle Connection Time" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="5" />
+      <filter>
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="PercentileChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" subchartweights="200" orientation="Horizontal" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" valuestyle="2" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition min="false" aggregationfromseries="false" scale="false" host="true" max="false" measure="true" count="false" last="false" sum="false" agent="true" aggregation="false" unit="false" avg="false" />
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" aggregationtype="Pct100" colorinheritancemode="parent" uiunit="ms" id="90e991a2-d8dc-441e-bae0-96e0ea49d16b" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Connection Time" sourcecolor="RGB(64,192,64,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="GoSpace" displayrate="10s" systemid="GoSpace" unit="ms" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Connection Time" metricgroupkey="Oracle System" collector="" systemid="GoSpace" agenthost="" parentkeyid="Connection Time" metrickeyid="Connection Time" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="RepositoryDB" measureunit="ms" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Pct100" autounit="false" sessionid="GoSpace" uiunit="ms" fetchmeasurecolor="true" id="f9355c83-cba1-3016-9a30-a65fd0f53c03" displayrate="10s" unit="ms" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="false" name="Connection Time" sourcecolor="RGB(128,64,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Connection Time" metricgroupkey="Oracle System" collector="" systemid="GoSpace" agenthost="dbserv" parentkeyid="Connection Time" metrickeyid="Connection Time" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="dbserv" monitordetails="RepositoryDB" measureunit="ms" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Pct100" autounit="false" sessionid="GoSpace" uiunit="ms" fetchmeasurecolor="true" id="c9fd51f1-2c9f-3e45-b464-bdd1e7e3a146" displayrate="10s" unit="ms" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="false" name="Connection Time" sourcecolor="RGB(64,192,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Connection Time" metricgroupkey="Oracle System" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Connection Time" metrickeyid="Connection Time" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="ms" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Pct100" autounit="false" sessionid="GoSpace" uiunit="ms" fetchmeasurecolor="true" id="943f488c-091e-34fe-beee-ef24f3267ed8" displayrate="10s" unit="ms" systemid="GoSpace" overridesource="false" rate="10s" ratesupported="false" name="Connection Time" sourcecolor="RGB(64,192,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Connection Time" metricgroupkey="Oracle System" collector="" systemid="GoSpace" agenthost="jhoffman" parentkeyid="Connection Time" metrickeyid="Connection Time" agentname="RepositoryDB" />
+            <displaysourceinfo monitorhost="jhoffman" monitordetails="RepositoryDB" measureunit="ms" monitorscheduleid="RepositoryDB" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" name="The Measure table" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="150" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="10" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="8" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="9" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="10" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="11" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="12" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="13" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+  </dashboardconfig>
+</dynatrace>
+
