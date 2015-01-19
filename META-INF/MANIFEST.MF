@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ClassPath: .,lib/commons-codec-1.8.jar,lib/commons-io-2.4.jar,l
+ ib/jsoup-1.7.2.jar,lib/jxl.jar,lib/ojdbc6.jar,lib/postgresql-9.2-1002
+ .jdbc4.jar,lib/sqljdbc4.jar
+Implementation-Version: 3.0.1.1559
+Built-By: labuser
+Bundle-Name: Oracle Plugin
+Created-By: 11.0-b15 (Sun Microsystems Inc.)
+Require-Bundle: com.dynatrace.diagnostics.sdk
+Ant-Version: Apache Ant 1.7.1
+Bundle-Vendor: dynaTrace Software
+Bundle-Version: 1.0.10
+Dynatrace-Plugin-Types: monitor, metric
+Bundle-ManifestVersion: 1
+Bundle-SymbolicName: com.dynatrace.diagnostics.plugins.OraclePlugin;si
+ ngleton:=true
+

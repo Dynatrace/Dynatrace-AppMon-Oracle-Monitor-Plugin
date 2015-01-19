@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ATTENTION - THIS IS AN AUTOMATICALLY GENERATED FILE -->
+<!-- Manual changes can cause severe problems and system instability -->
+<!-- Apply manual changes only if you have received explicit instructions from dynaTrace Support -->
+<dynatrace version="6.0.0.7000" date="11/8/14 3:44 PM">
+  <dashboardconfig memento.version="6.0.0.7000" icon="com.dynatrace.diagnostics.sdk/default.gif" localizationenabled="false" sessiontype="live" locationassource="false" groupname="" authorname="admin" opendrilldowninnewdashboard="false" sessionid="test-profile" autoreplacesession="false" modified="2014-11-08T15:44:14-0500" id="d73061ba-941a-4c07-a85a-e1845a5ba642" revision="00000149-9126-69f3-b0e7-be256aeb999b" source="server://bos125685n03" created="2014-02-16T08:11:09-0500" description="" name="Oracle Database Dashboard" modifiedbyname="dmaext0" locationascomparesource="false">
+    <reportconfig lines.per.table="100" pagesize="A4" enabled="true" print.legends="true" orientation="portrait" formathtml="com.dynatrace.diagnostics.report.velocity.format.htmlrenderer" optimizeequalcolumns="true" type="PDF" title="New Dashboard" override="false" levels.per.tree="10" description="" formatpdf="com.dynatrace.diagnostics.report.velocity.format.pdfrenderer" print.images="true" />
+    <filter>
+      <criterion completepurepath="true" type="agents" mode="all">
+        <textpattern enabled="true" name="agentname" type="contains" />
+        <textpattern enabled="true" name="agenthost" type="contains" />
+      </criterion>
+      <criterion type="and" />
+      <criterion excludeexternalsubpaths="false" type="api" mode="all" />
+      <criterion type="applications" mode="all" />
+      <criterion showrendering="true" isactive="true" shownetwork="true" showjavascript="true" type="browserpathtype" />
+      <criterion timerenabled="false" pageenabled="false" type="browsersectionfilter">
+        <timername>
+          <stringmatchpattern text="" match="contains" />
+        </timername>
+        <pageurl>
+          <stringmatchpattern text="" match="contains" />
+        </pageurl>
+      </criterion>
+      <criterion type="btm" />
+      <criterion type="casuemdimension" />
+      <criterion filterinterval="false" intervalend="0" type="dcrumdimension" intervalstart="0" />
+      <criterion isactive="true" analyzeserverpath="true" type="enduserpath" analyzeenduserpath="true" />
+      <criterion completepurepath="true" type="hosts" mode="all" />
+      <criterion severities="" statesmode="all" severitiesmode="all" states="" rulesmode="all" type="incident" />
+      <criterion type="or" />
+      <criterion enduser="false" type="purepaths" mode="all" />
+      <criterion showrendering="true" isactive="false" contenttypegroupsmode="all" javascripttriggersmode="all" shownetwork="true" showjavascript="true" type="riapurepathtype" requestcriterion="ALL" />
+      <criterion includemeasurename="true" includetestname="true" type="tests" teststatus="OK" />
+      <criterion enabled="false" filterbyid="false" type="threads" />
+      <criterion type="timeframe">
+        <timeframe type="Last 1h" />
+      </criterion>
+      <criterion type="visits">
+        <visitidset />
+      </criterion>
+      <criterion type="webpage">
+        <textpattern enabled="true" name="timerName" type="contains" />
+        <textpattern enabled="true" name="pageContext" type="contains" />
+      </criterion>
+      <criterion type="webrequest">
+        <filteruripattern>
+          <stringmatchpattern text="" match="contains" />
+        </filteruripattern>
+        <filterquerypattern>
+          <stringmatchpattern text="" match="contains" />
+        </filterquerypattern>
+      </criterion>
+    </filter>
+    <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+    <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" descriptionfontsize="8" nameshow="true" clienttheme="DEFAULT" headertype="DEFAULT" namefontsize="10" descriptionshow="true" autoadjustfontsizes="false" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+    <dashboardlayout>
+      <portletfolder relationtype="LEFT" ratio="0.95" folderid="df701663-eafe-44a6-9b56-43ff8b4f126d" selectionindex="1" relatedfolderid="DashboardLayout.blankArea" portletconfigorder="8a25c1f3-31d0-4a53-ad40-07868357c72c, 49142b0b-eaff-4add-8d93-29003cffdfb8">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" headertype="DEFAULT" namealignment="CENTER" inherited="true" namefontsize="10" descriptionfontsize="8" descriptionshow="true" descriptionfontcolor="128,128,128" namefontstyle="BOLD" nameshow="true" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.68882173" folderid="org.eclipse.ui.internal.ViewStack@41af91" selectionindex="0" relatedfolderid="df701663-eafe-44a6-9b56-43ff8b4f126d" portletconfigorder="c10b66d4-2968-4d4e-b03f-8faa98217986">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" headertype="DEFAULT" namealignment="CENTER" inherited="true" namefontsize="10" descriptionfontsize="8" descriptionshow="true" descriptionfontcolor="128,128,128" namefontstyle="BOLD" nameshow="true" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.39378238" folderid="org.eclipse.ui.internal.ViewStack@fefe2a" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@41af91" portletconfigorder="e4a782df-9da7-440e-8898-7d1f6ee50f54, b79dfa36-d10c-47e5-8c92-cc64027d859d">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" headertype="DEFAULT" namealignment="CENTER" inherited="true" namefontsize="10" descriptionfontsize="8" descriptionshow="true" descriptionfontcolor="128,128,128" namefontstyle="BOLD" nameshow="true" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.45014244" folderid="org.eclipse.ui.internal.ViewStack@33d1c6" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@fefe2a" portletconfigorder="3b92d724-23bd-41b3-aeed-1f523b5746bd">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" headertype="DEFAULT" namealignment="CENTER" inherited="true" namefontsize="10" descriptionfontsize="8" descriptionshow="true" descriptionfontcolor="128,128,128" namefontstyle="BOLD" nameshow="true" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.4715026" folderid="org.eclipse.ui.internal.ViewStack@ab0321" selectionindex="3" relatedfolderid="df701663-eafe-44a6-9b56-43ff8b4f126d" portletconfigorder="62a4638b-d8c1-4124-9cea-976f4a4915a9, 453f9861-0699-4d97-ae42-6be90f0661cb, 01eef699-d771-42de-9b91-83be08719ceb, a4251e2c-5e44-4639-a3fd-c2ca358e082c, 46f53325-113d-4959-bf36-55e1c523fd58, 5448dbb2-d991-4561-9966-68d7998ee0aa, 99a5105e-415e-47c7-a97c-219c01c01565">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" headertype="DEFAULT" namealignment="CENTER" inherited="true" namefontsize="10" descriptionfontsize="8" descriptionshow="true" descriptionfontcolor="128,128,128" namefontstyle="BOLD" nameshow="true" />
+      </portletfolder>
+    </dashboardlayout>
+    <portletconfig usespecificautorefresh="true" icon="com.dynatrace.diagnostics.sdk/default.gif" usedashboardsourceforcompare="true" folderid="df701663-eafe-44a6-9b56-43ff8b4f126d" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="test-profile" id="8a25c1f3-31d0-4a53-ad40-07868357c72c" addfilterinfo="false" source="server://bos125685n03" description="The Chart Dashlet displays the observation and analysis of the System under Diagnosis components over time." lastvalue="false" name="Oracle SGA Cache Hit Ratios" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="2" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 1h" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap>
+          <inheritanceentry inherited="false" type="timeframe" />
+        </inheritancemap>
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" bounds.y.lower="0.0" charttype="AreaChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="true" bounds.y.enabled="true" axis.y.show="true" bounds.y.upper="100.0" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition measure="true">
+            <pielabelcomposition measure="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="percent" groupingvalue="" id="98327a81-27fe-4031-9954-35797202cb53" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="SQL Area Get Ratio" sourcecolor="RGB(0,0,128,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="test-profile" groupingcriterion="AgentOrMonitor" displayrate="10s" unit="percent" systemid="test-profile" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="SQL Area Get Ratio" metricgroupkey="Oracle SGA" collector="" systemid="test-profile" application="" agenthost="" parentkeyid="SQL Area Get Ratio" measuretype="MonitorMeasure" metrickeyid="SQL Area Get Ratio" agentname="ORCL-Monitor" metricsimpledisplayname="SQL Area Get Ratio" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="ORCL-Monitor" measureunit="percent" monitorscheduleid="ORCL-Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="percent" groupingvalue="" id="9f381540-2509-4bb2-8d0e-19a6d5c71178" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Memory Sort Ratio" sourcecolor="RGB(192,64,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="test-profile" groupingcriterion="AgentOrMonitor" displayrate="10s" unit="percent" systemid="test-profile" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Memory Sort Ratio" metricgroupkey="Oracle SGA" collector="" systemid="test-profile" application="" agenthost="" parentkeyid="Memory Sort Ratio" measuretype="MonitorMeasure" metrickeyid="Memory Sort Ratio" agentname="ORCL-Monitor" metricsimpledisplayname="Memory Sort Ratio" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="ORCL-Monitor" measureunit="percent" monitorscheduleid="ORCL-Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="3" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="percent" groupingvalue="" id="610626d0-9b8b-433b-a823-93b4eb56c95f" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Execution Without Parse Ratio" sourcecolor="RGB(64,192,192,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="test-profile" groupingcriterion="AgentOrMonitor" displayrate="10s" unit="percent" systemid="test-profile" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Execution Without Parse Ratio" metricgroupkey="Oracle SGA" collector="" systemid="test-profile" application="" agenthost="" parentkeyid="Execution Without Parse Ratio" measuretype="MonitorMeasure" metrickeyid="Execution Without Parse Ratio" agentname="ORCL-Monitor" metricsimpledisplayname="Execution Without Parse Ratio" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="ORCL-Monitor" measureunit="percent" monitorscheduleid="ORCL-Monitor" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="2" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="150" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="2" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="10" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="8" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="9" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="10" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="11" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="12" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="13" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true" deploymentevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/default_16x16.png" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@ab0321" locationassource="false" usedashboardsource="true" url="http://localhost:8080/SqlMVC/tablespaces" id="99a5105e-415e-47c7-a97c-219c01c01565" addfilterinfo="false" source="server://bos125685n03" description="" name="Analysis of Tablespaces" typeid="com.dynatrace.diagnostics.portlets.webpage.WebPage" ismaster="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="12" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+    </portletconfig>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/default_16x16.png" usespecificautorefresh="true" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@ab0321" locationassource="false" usedashboardsource="true" label="Top 10 Slow SQL" url="http://localhost:8080/SqlMVC/search" id="a4251e2c-5e44-4639-a3fd-c2ca358e082c" addfilterinfo="false" source="server://bos125685n03" description="" name="Analysis of Slow SQL" typeid="com.dynatrace.diagnostics.portlets.webpage.WebPage" ismaster="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="7" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="1" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="true" icon="com.dynatrace.diagnostics.sdk/default.gif" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@fefe2a" sessiontype="live" locationassource="false" usedashboardsource="false" sessionid="test-profile" id="b79dfa36-d10c-47e5-8c92-cc64027d859d" addfilterinfo="false" source="server://bos125685n01" description="The Chart Dashlet displays the observation and analysis of the System under Diagnosis components over time." lastvalue="false" name="Oracle System Waits" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="3" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 1h" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="AreaChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition measure="true">
+            <pielabelcomposition measure="true" />
+          </legendcomposition>
+          <chartsource position="3" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="number" groupingvalue="" id="7005e52b-b9d1-4742-bd9c-b2d2395d4e99" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="Write Complete Waits" sourcecolor="RGB(192,192,64,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="test-profile" groupingcriterion="AgentOrMonitor" displayrate="10s" unit="number" systemid="test-profile" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Write Complete Waits" metricgroupkey="Oracle SGA" collector="" systemid="test-profile" application="" agenthost="" parentkeyid="Write Complete Waits" measuretype="MonitorMeasure" metrickeyid="Write Complete Waits" agentname="ORCL-Monitor" metricsimpledisplayname="Write Complete Waits" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="ORCL-Monitor" measureunit="number" monitorscheduleid="ORCL-Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="number" groupingvalue="" id="72b5d6a3-db0e-492d-b480-38b9d2633e80" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="Free Buffer Waits" sourcecolor="RGB(0,64,64,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="test-profile" groupingcriterion="AgentOrMonitor" displayrate="10s" unit="number" systemid="test-profile" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Free Buffer Waits" metricgroupkey="Oracle SGA" collector="" systemid="test-profile" application="" agenthost="" parentkeyid="Free Buffer Waits" measuretype="MonitorMeasure" metrickeyid="Free Buffer Waits" agentname="ORCL-Monitor" metricsimpledisplayname="Free Buffer Waits" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="ORCL-Monitor" measureunit="number" monitorscheduleid="ORCL-Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="number" groupingvalue="" id="7afa1624-a4f6-43b3-8fb7-e33ca800593e" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="Buffer Busy Waits" sourcecolor="RGB(0,128,128,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="test-profile" groupingcriterion="AgentOrMonitor" displayrate="10s" unit="number" systemid="test-profile" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Buffer Busy Waits" metricgroupkey="Oracle SGA" collector="" systemid="test-profile" application="" agenthost="" parentkeyid="Buffer Busy Waits" measuretype="MonitorMeasure" metrickeyid="Buffer Busy Waits" agentname="ORCL-Monitor" metricsimpledisplayname="Buffer Busy Waits" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="ORCL-Monitor" measureunit="number" monitorscheduleid="ORCL-Monitor" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="2" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="150" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="2" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="10" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="8" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="9" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="10" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="11" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="12" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="13" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true" deploymentevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="true" icon="com.dynatrace.diagnostics.sdk/default.gif" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@41af91" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="test-profile" id="c10b66d4-2968-4d4e-b03f-8faa98217986" addfilterinfo="false" source="server://bos125685n03" description="The Chart Dashlet displays the observation and analysis of the System under Diagnosis components over time." lastvalue="false" name="Oracle Logical to Physical Reads" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="4" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 1h" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap>
+          <inheritanceentry inherited="false" type="timeframe" />
+        </inheritancemap>
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="673,318" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="PieChart3D" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition measure="true">
+            <pielabelcomposition measure="true" />
+          </legendcomposition>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="number" groupingvalue="" id="baad0ac8-4603-4e2e-b116-2e576c2aebc2" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="Physical Reads" sourcecolor="RGB(192,128,64,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="test-profile" groupingcriterion="AgentOrMonitor" displayrate="10s" unit="number" systemid="test-profile" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Physical Reads" metricgroupkey="Oracle SGA" collector="" systemid="test-profile" application="" agenthost="" parentkeyid="Physical Reads" measuretype="MonitorMeasure" metrickeyid="Physical Reads" agentname="ORCL-Monitor" metricsimpledisplayname="Physical Reads" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="ORCL-Monitor" measureunit="number" monitorscheduleid="ORCL-Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="number" groupingvalue="" id="eca590c8-37cf-43ce-b61d-022c4b9df7d4" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="DB Block Gets" sourcecolor="RGB(0,64,192,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="test-profile" groupingcriterion="AgentOrMonitor" displayrate="10s" unit="number" systemid="test-profile" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="DB Block Gets" metricgroupkey="Oracle SGA" collector="" systemid="test-profile" application="" agenthost="" parentkeyid="DB Block Gets" measuretype="MonitorMeasure" metrickeyid="DB Block Gets" agentname="ORCL-Monitor" metricsimpledisplayname="DB Block Gets" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="ORCL-Monitor" measureunit="number" monitorscheduleid="ORCL-Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="3" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="number" groupingvalue="" id="effb6c4c-1514-403d-bd1a-47b586beda55" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="Consistent Gets" sourcecolor="RGB(0,0,192,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="test-profile" groupingcriterion="AgentOrMonitor" displayrate="10s" unit="number" systemid="test-profile" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Consistent Gets" metricgroupkey="Oracle SGA" collector="" systemid="test-profile" application="" agenthost="" parentkeyid="Consistent Gets" measuretype="MonitorMeasure" metrickeyid="Consistent Gets" agentname="ORCL-Monitor" metricsimpledisplayname="Consistent Gets" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="ORCL-Monitor" measureunit="number" monitorscheduleid="ORCL-Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="4" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="number" groupingvalue="" id="50d008ec-7caf-45f2-a044-3969e2277fe2" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="Physical Writes" sourcecolor="RGB(128,64,128,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="test-profile" groupingcriterion="AgentOrMonitor" displayrate="10s" unit="number" systemid="test-profile" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Physical Writes" metricgroupkey="Oracle SGA" collector="" systemid="test-profile" application="" agenthost="" parentkeyid="Physical Writes" measuretype="MonitorMeasure" metrickeyid="Physical Writes" agentname="ORCL-Monitor" metricsimpledisplayname="Physical Writes" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="ORCL-Monitor" measureunit="number" monitorscheduleid="ORCL-Monitor" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="2" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="150" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="2" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="10" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="8" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="9" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="10" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="11" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="12" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="13" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true" deploymentevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default.gif" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@fefe2a" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="test-profile" id="e4a782df-9da7-440e-8898-7d1f6ee50f54" addfilterinfo="false" source="server://bos125685n03" description="The Chart Dashlet displays the observation and analysis of the System under Diagnosis components over time." lastvalue="false" name="Oracle Concurrent Sessions" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="0" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 1h" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="201,798" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="StackedAreaChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition measure="true">
+            <pielabelcomposition measure="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="number" groupingvalue="" id="ed2d934c-fcfc-44f5-9e18-bc9322c41239" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="Current Concurrent User Sessions" sourcecolor="RGB(192,0,192,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="test-profile" groupingcriterion="AgentOrMonitor" displayrate="10s" unit="number" systemid="test-profile" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Current Concurrent User Sessions" metricgroupkey="Oracle Sessions" collector="" systemid="test-profile" application="" agenthost="" parentkeyid="Current Concurrent User Sessions" measuretype="MonitorMeasure" metrickeyid="Current Concurrent User Sessions" agentname="ORCL-Monitor" metricsimpledisplayname="Current Concurrent User Sessions" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="ORCL-Monitor" measureunit="number" monitorscheduleid="ORCL-Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="number" groupingvalue="" id="61115bc0-77c2-4b2a-948c-ad98bd9471aa" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="Highest Concurrent User Sessions" sourcecolor="RGB(64,192,128,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="test-profile" groupingcriterion="AgentOrMonitor" displayrate="10s" unit="number" systemid="test-profile" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Highest Concurrent User Sessions" metricgroupkey="Oracle Sessions" collector="" systemid="test-profile" application="" agenthost="" parentkeyid="Highest Concurrent User Sessions" measuretype="MonitorMeasure" metrickeyid="Highest Concurrent User Sessions" agentname="ORCL-Monitor" metricsimpledisplayname="Highest Concurrent User Sessions" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="ORCL-Monitor" measureunit="number" monitorscheduleid="ORCL-Monitor" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="0" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="321" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="10" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="8" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="9" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="10" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="11" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="12" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="13" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true" deploymentevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/default_16x16.png" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@ab0321" locationassource="false" usedashboardsource="true" url="http://localhost:8020/statics/images/oracle/tablespaces.html" id="01eef699-d771-42de-9b91-83be08719ceb" addfilterinfo="false" source="server://bos125685n03" description="" name="Tablespaces" typeid="com.dynatrace.diagnostics.portlets.webpage.WebPage" ismaster="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="13" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="true" icon="com.dynatrace.diagnostics.sdk/default.gif" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@33d1c6" sessiontype="live" locationassource="false" usedashboardsource="false" sessionid="test-profile" id="3b92d724-23bd-41b3-aeed-1f523b5746bd" addfilterinfo="false" source="server://bos125685n01" description="The Chart Dashlet displays the observation and analysis of the System under Diagnosis components over time." lastvalue="false" name="Oracle Connection Time" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="5" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 1h" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" bounds.y.lower="0.0" charttype="ClusteredBarChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="true" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition measure="true">
+            <pielabelcomposition measure="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Max" uiunit="ms" groupingvalue="" id="dc4bb40c-784d-44df-b733-4ed1ccc7b1d2" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Connection Time" sourcecolor="RGB(128,64,128,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="test-profile" groupingcriterion="AgentOrMonitor" displayrate="10s" unit="ms" systemid="test-profile" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Connection Time" metricgroupkey="Oracle System" collector="" systemid="test-profile" application="" agenthost="" parentkeyid="Connection Time" measuretype="MonitorMeasure" metrickeyid="Connection Time" agentname="ORCL-Monitor" metricsimpledisplayname="Connection Time" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="ORCL-Monitor" measureunit="ms" monitorscheduleid="ORCL-Monitor" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="4" structuremode="measureHierarchy" columnorder="0,1,2,3,4,6,5,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="150" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="10" />
+          <column index="4" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="8" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="9" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="10" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="11" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="12" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="13" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true" deploymentevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/default.gif" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@ab0321" locationassource="false" usedashboardsource="true" url="http://localhost:8020/statics/images/oracle/locks.html" id="453f9861-0699-4d97-ae42-6be90f0661cb" addfilterinfo="false" source="server://bos125685n03" description="" name="Oracle Locks" typeid="com.dynatrace.diagnostics.portlets.webpage.WebPage" ismaster="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="2" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+    </portletconfig>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/default_16x16.png" usespecificautorefresh="true" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@ab0321" locationassource="false" usedashboardsource="true" label="Locks" url="http://localhost:8080/SqlMVC/locks" id="46f53325-113d-4959-bf36-55e1c523fd58" addfilterinfo="false" source="server://bos125685n03" description="" name="Analysis of Locks" typeid="com.dynatrace.diagnostics.portlets.webpage.WebPage" ismaster="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="9" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="1" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" usedashboardsourceforcompare="true" folderid="df701663-eafe-44a6-9b56-43ff8b4f126d" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="test-profile" id="49142b0b-eaff-4add-8d93-29003cffdfb8" addfilterinfo="false" source="server://bos125685n03" description="" lastvalue="false" name="Chart" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="14" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 1h" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="1,1" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="LineChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition splittings="true" host="true" measure="true" agent="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="16" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true" deploymentevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/default_16x16.png" usespecificautorefresh="true" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@ab0321" locationassource="false" usedashboardsource="true" label="Explain Plans" url="http://localhost:8080/SqlMVC/plans" id="5448dbb2-d991-4561-9966-68d7998ee0aa" addfilterinfo="false" source="server://bos125685n03" description="Explain plans for slow SQL" name="Explain Plans" typeid="com.dynatrace.diagnostics.portlets.webpage.WebPage" ismaster="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="11" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="1" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+    </portletconfig>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/default_16x16.png" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@ab0321" locationassource="false" usedashboardsource="true" url="http://localhost:8020/statics/images/oracle/sqls.html " id="62a4638b-d8c1-4124-9cea-976f4a4915a9" addfilterinfo="false" source="server://bos125685n03" description="" name="Slow Sqls" typeid="com.dynatrace.diagnostics.portlets.webpage.WebPage" ismaster="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="6" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="true" time="1" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+    </portletconfig>
+  </dashboardconfig>
+</dynatrace>
+

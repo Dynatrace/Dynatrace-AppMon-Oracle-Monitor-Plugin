@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<!-- plugin.xml file written by dynaTrace Client 3.0.0 -->
+<plugin>
+  <extension point="com.dynatrace.diagnostics.pdk.pluginconfig" id="com.dynatrace.diagnostics.plugins.OraclePlugin" name="Oracle Plugin">
+    <information>
+      <category value="" />
+      <description value="Get statistics from the Oracle database" />
+      <supportlevel value="unsupported" />
+      <displayname value="Oracle Plugin" />
+    </information>
+    <configuration>
+      <property key="hostName" label="hostName" type="string" description="My property description ..." default="localhost" multiline="false" />
+      <property key="isServiceName" label="isServiceName" type="boolean" description="If true oracle service name is used, otherwise it is SID" default="false" />
+      <property key="dbName" label="dbName" type="string" description="My property description ..." default="ORCL" multiline="false">
+        <visibility>
+          <rule key="isServiceName" value="false" />
+        </visibility>
+      </property>
+      <property key="serviceName" label="serviceName" type="string" description="service name" default="" multiline="false">
+        <visibility>
+          <rule key="isServiceName" value="true" />
+        </visibility>
+      </property>
+      <property key="dbPort" label="dbPort" type="string" description="My property description ..." default="1521" multiline="false" />
+      <property key="dbUsername" label="dbUsername" type="string" description="My property description ..." default="cmillerjava" multiline="false" />
+      <property key="dbPassword" label="dbPassword" type="password" description="My property description ..." default="" />
+      <property key="topSqls" label="Top Slow SQLs" type="long" description="Top first slow SQL statements will be displayed on the page" default="10" />
+      <property key="isExplainPlan" label="isExplainPlan" type="boolean" description="Produce Explain Plan indicator" default="false">
+        <visibility>
+          <rule key="isHistoryOn" value="true" />
+        </visibility>
+      </property>
+      <property key="isDynamicMeasures" label="isDynamicMeasures" type="boolean" description="Enable or disable creation of the dynamic measures by the plugin" default="false" />
+      <property key="htmlFileSqls" label="htmlFileSqls" type="string" description="Location of the html file with list of top slow SQLs which plugin task will generate based on task schedule" default="" multiline="false" />
+      <property key="htmlFileLocks" label="htmlFileLocks" type="string" description="Location of the html file with list of locks which plugin task will generate based on task schedule" default="" multiline="false" />
+      <property key="htmlFileTablespaces" label="htmlFileTablespaces" type="string" description="location of the html file for tablespace stats" default="" multiline="false" />
+      <property key="typeOfSlowness" label="typeOfSlowness" type="list" description="Defines criteria for the selection of top slow SQLs" default="elapsed_time">
+        <list>
+          <item value="elapsed_time" />
+          <item value="buffer_gets" />
+          <item value="cpu_time" />
+          <item value="executions" />
+          <item value="parse_calls" />
+          <item value="disk_reads" />
+          <item value="direct_writes" />
+          <item value="rows_processed" />
+        </list>
+      </property>
+      <property key="isHistoryOn" label="isHistoryOn" type="boolean" description="Indicator when true shows that history tables will be populated with stats, otherwise false." default="true" />
+      <property key="dbTypeHistory" label="DB type for history tables" type="list" description="My property description ..." default="Oracle">
+        <list>
+          <item value="Oracle" />
+          <item value="SQLServer" />
+          <item value="PostgreSQL" />
+        </list>
+        <visibility>
+          <rule key="isHistoryOn" value="true" />
+        </visibility>
+      </property>
+      <property key="isServiceNameHistory" label="isServiceNameHistory" type="boolean" description="if true service name is used for the history database, otherwise it is SID" default="false">
+        <visibility>
+          <rule key="dbTypeHistory" value="Oracle" />
+        </visibility>
+      </property>
+      <property key="dbNameOracleHistory" label="dbNameOracleHistory" type="string" description="Database name where tables which contain historical data are belong to" default="" multiline="false">
+        <visibility>
+          <rule key="isServiceNameHistory" value="false" />
+        </visibility>
+      </property>
+      <property key="serviceNameHistory" label="serviceNameHistory" type="string" description="service name for the history database" default="" multiline="false">
+        <visibility>
+          <rule key="isServiceNameHistory" value="true" />
+        </visibility>
+      </property>
+      <property key="dbNameSQLServerHistory" label="dbNameSQLServerHistory" type="string" description="Database name for MS SQL server where tables which contain historical data are belong to" default="" multiline="false">
+        <visibility>
+          <rule key="dbTypeHistory" value="SQLServer" />
+        </visibility>
+      </property>
+      <property key="dbNamePostgreSQLHistory" label="dbNamePostgreSQLHistory" type="string" description="Database name for PostgreSql database where tables which contain historical data are belong to" default="" multiline="false">
+        <visibility>
+          <rule key="dbTypeHistory" value="PostgreSQL" />
+        </visibility>
+      </property>
+      <property key="hostNameHistory" label="hostNameHistory" type="string" description="Server which hosts database with history tables" default="" multiline="false">
+        <visibility>
+          <rule key="isHistoryOn" value="true" />
+        </visibility>
+      </property>
+      <property key="dbPortHistory" label="dbPortHistory" type="string" description="Database port for history tables" default="1521" multiline="false">
+        <visibility>
+          <rule key="isHistoryOn" value="true" />
+        </visibility>
+      </property>
+      <property key="dbUsernameHistory" label="dbUsernameHistory" type="string" description="User name " default="" multiline="false">
+        <visibility>
+          <rule key="isHistoryOn" value="true" />
+        </visibility>
+      </property>
+      <property key="dbPasswordHistory" label="dbPasswordHistory" type="password" description="My property description ..." default="">
+        <visibility>
+          <rule key="isHistoryOn" value="true" />
+        </visibility>
+      </property>
+    </configuration>
+  </extension>
+  <extension point="com.dynatrace.diagnostics.pdk.monitor" id="com.dynatrace.diagnostics.plugins.OraclePlugin.monitor" name="Oracle Monitor">
+    <plugin configid="com.dynatrace.diagnostics.plugins.OraclePlugin" class="com.dynatrace.diagnostics.plugins.OracleMonitor" />
+  </extension>
+  <extension point="com.dynatrace.diagnostics.pdk.monitormetricgroup" id="com.dynatrace.diagnostics.plugins.OraclePlugin.monitor.metricgroup1" name="Oracle SGA">
+    <metricgroup monitorid="com.dynatrace.diagnostics.plugins.OraclePlugin.monitor">
+      <metric name="Free Buffer Waits" unit="number" description="My metric description ..." />
+      <metric name="Write Complete Waits" unit="number" description="My metric description ..." />
+      <metric name="Buffer Busy Waits" unit="number" description="My metric description ..." />
+      <metric name="DB Block Changes" unit="number" description="My metric description ..." />
+      <metric name="DB Block Gets" unit="number" description="My metric description ..." />
+      <metric name="Consistent Gets" unit="number" description="My metric description ..." />
+      <metric name="Physical Reads" unit="number" description="My metric description ..." />
+      <metric name="Physical Writes" unit="number" description="My metric description ..." />
+      <metric name="Buffer Cache Hit Ratio" unit="percent" description="My metric description ..." />
+      <metric name="Execution Without Parse Ratio" unit="percent" description="My metric description ..." />
+      <metric name="Memory Sort Ratio" unit="percent" description="My metric description ..." />
+      <metric name="SQL Area Get Ratio" unit="percent" description="My metric description ..." />
+    </metricgroup>
+  </extension>
+  <extension point="com.dynatrace.diagnostics.pdk.monitormetricgroup" id="com.dynatrace.diagnostics.plugins.OraclePlugin.monitor.metricgroup2" name="Oracle Sessions">
+    <metricgroup monitorid="com.dynatrace.diagnostics.plugins.OraclePlugin.monitor">
+      <metric name="Maximum Concurrent User Sessions" unit="number" description="My metric description ..." />
+      <metric name="Current Concurrent User Sessions" unit="number" description="My metric description ..." />
+      <metric name="Highest Concurrent User Sessions" unit="number" description="My metric description ..." />
+      <metric name="Maximum Named Users" unit="number" description="My metric description ..." />
+    </metricgroup>
+  </extension>
+  <extension point="com.dynatrace.diagnostics.pdk.monitormetricgroup" id="com.dynatrace.diagnostics.plugins.OraclePlugin.monitor.metricgroup3" name="Oracle System">
+    <metricgroup monitorid="com.dynatrace.diagnostics.plugins.OraclePlugin.monitor">
+      <metric name="Connection Time" unit="ms" description="My metric description ..." />
+    </metricgroup>
+  </extension>
+  <extension point="com.dynatrace.diagnostics.pdk.monitormetricgroup" id="com.dynatrace.diagnostics.plugins.OraclePlugin.monitor.metricgroup4" name="Oracle SQL">
+    <metricgroup monitorid="com.dynatrace.diagnostics.plugins.OraclePlugin.monitor">
+      <metric name="Executions" unit="number" description="Number of executions for given SQL" />
+      <metric name="Elapsed Time" unit="s" description="Total elapsed time taken by this SQL" />
+      <metric name="Average Elapsed Time" unit="s" description="Average elapsed time per execution for given SQL" />
+      <metric name="CPU Time" unit="s" description="Total CPU time taken by this SQL" />
+      <metric name="Average CPU Time" unit="s" description="Average CPU time per execution for given SQL" />
+      <metric name="Disk Reads" unit="number" description="Number of disk reads for given SQL" />
+      <metric name="Direct Writes" unit="number" description="Number of direct writes for given SQL" />
+      <metric name="Buffer Gets" unit="number" description="Number of buffer gets for given SQL" />
+      <metric name="Rows Processed" unit="number" description="Number of processed rows for given SQL" />
+      <metric name="Parse Calls" unit="number" description="Number of parse calls for given SQL" />
+      <metric name="First Load Time" unit="number" description="First load time for given SQL" />
+      <metric name="Last Load Time" unit="number" description="Last load time for given SQL" />
+      <metric name="Child Member" unit="number" description="Number of this child cursor" />
+    </metricgroup>
+  </extension>
+  <extension point="com.dynatrace.diagnostics.pdk.monitormetricgroup" id="com.dynatrace.diagnostics.plugins.OraclePlugin.monitor.metricgroup5" name="Oracle Locks">
+    <metricgroup monitorid="com.dynatrace.diagnostics.plugins.OraclePlugin.monitor">
+      <metric name="LockMode" unit="number" description="Type of the Lock:   0, 'None'; 1, 'Null'; 2, 'Row-S (SS)'; 3, 'Row-X (SX)'; 4, 'Share'; 5, 'S/Row-X (SSX)'; 6, 'Exclusive'" />
+      <metric name="Status" unit="number" description="Status of the database object" />
+      <metric name="LastDdl" unit="number" description="time when last DDL change was applied to the database object" />
+    </metricgroup>
+  </extension>
+  <extension point="com.dynatrace.diagnostics.pdk.monitormetricgroup" id="com.dynatrace.diagnostics.plugins.OraclePlugin.monitor.metricgroup6" name="Oracle Tablespaces">
+    <metricgroup monitorid="com.dynatrace.diagnostics.plugins.OraclePlugin.monitor">
+      <metric name="Total" unit="bytes" description="Size of the tablespace in bytes" />
+      <metric name="Used" unit="bytes" description="Size of the used space in the tablespace in bytes" />
+      <metric name="Free" unit="bytes" description="Size of the free space in the tablespace in bytes" />
+      <metric name="Percent Used" unit="percent" description="Percent of used space in the tablespace" />
+      <metric name="Percent Free" unit="percent" description="Percent of free space in the tablespace" />
+    </metricgroup>
+  </extension>
+</plugin>
+
