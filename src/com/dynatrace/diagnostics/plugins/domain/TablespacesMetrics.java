@@ -51,5 +51,15 @@ public class TablespacesMetrics {
 	public void setPercentFree(Double percentFree) {
 		this.percentFree = percentFree;
 	}
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("TablespacesMetrics [key=").append(key)
+				.append(", name=").append(name).append(", total=")
+				.append(total).append(", used=").append(used).append(", free=")
+				.append(free).append(", percentUsed=").append(percentUsed)
+				.append(", percentFree=").append(percentFree).append("]");
+		return builder.toString();
+	}
 	
 }

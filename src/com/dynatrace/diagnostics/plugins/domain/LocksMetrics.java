@@ -4,6 +4,8 @@ public class LocksMetrics {
 	private String key;
 	private String sidSerial;
 	private String oraUser;
+	private String osUserName;
+	private String owner;
 	private String objectName;
 	private String objectType;
 	private String lockMode;
@@ -30,6 +32,18 @@ public class LocksMetrics {
 	}
 	public void setOraUser(String oraUser) {
 		this.oraUser = oraUser;
+	}
+	public String getOsUserName() {
+		return osUserName;
+	}
+	public void setOsUserName(String osUserName) {
+		this.osUserName = osUserName;
+	}
+	public String getOwner() {
+		return owner;
+	}
+	public void setOwner(String owner) {
+		this.owner = owner;
 	}
 	public String getObjectName() {
 		return objectName;
@@ -78,5 +92,16 @@ public class LocksMetrics {
 	}
 	public void setLastDdlMeasure(Double lastDdlMeasure) {
 		this.lastDdlMeasure = lastDdlMeasure;
+	}
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("LocksMetrics [key=").append(key).append(", sidSerial=").append(sidSerial).append(", oraUser=")
+				.append(oraUser).append(", osUserName=").append(osUserName).append(", owner=").append(owner)
+				.append(", objectName=").append(objectName).append(", objectType=").append(objectType)
+				.append(", lockMode=").append(lockMode).append(", lockModeMeasure=").append(lockModeMeasure)
+				.append(", status=").append(status).append(", statusMeasure=").append(statusMeasure)
+				.append(", lastDdl=").append(lastDdl).append(", lastDdlMeasure=").append(lastDdlMeasure).append("]");
+		return builder.toString();
 	}
 }

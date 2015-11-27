@@ -158,6 +158,32 @@ public class SqlMetrics {
 	public void setSrcDbNameId(Long srcDbNameId) {
 		this.srcDbNameId = srcDbNameId;
 	}
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("SqlMetrics [sid=").append(sid).append(", sqlFulltext=")
+				.append(sqlFulltext).append(", key=").append(key)
+				.append(", executions=").append(executions)
+				.append(", elapsedTime=").append(elapsedTime)
+				.append(", averageElapsedTime=").append(averageElapsedTime)
+				.append(", cpuTime=").append(cpuTime)
+				.append(", averageCpuTime=").append(averageCpuTime)
+				.append(", diskReads=").append(diskReads)
+				.append(", directWrites=").append(directWrites)
+				.append(", bufferGets=").append(bufferGets)
+				.append(", rowsProcessed=").append(rowsProcessed)
+				.append(", parseCalls=").append(parseCalls)
+				.append(", firstLoadTime=").append(firstLoadTime)
+				.append(", firstLoadTimeDate=").append(firstLoadTimeDate)
+				.append(", lastLoadTime=").append(lastLoadTime)
+				.append(", lastLoadTimeDate=").append(lastLoadTimeDate)
+				.append(", childNumber=").append(childNumber)
+				.append(", planHashValue=").append(planHashValue)
+				.append(", explainPlanId=").append(explainPlanId)
+				.append(", explainPlan=").append(explainPlan)
+				.append(", srcDbNameId=").append(srcDbNameId).append("]");
+		return builder.toString();
+	}
 	
 
 }
